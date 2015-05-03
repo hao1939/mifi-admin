@@ -16,8 +16,13 @@
         "module": "ngRoute"
       },
       "ui": {
-        "key": "angular-material",
-        "module": "ngMaterial"
+        "key": "bootstrap",
+        "module": null,
+        "name": "bootstrap"
+      },
+      "bootstrapComponents": {
+        "key": "ui-bootstrap",
+        "module": "ui.bootstrap"
       },
       "cssPreprocessor": {
         "key": "none",
@@ -31,12 +36,6 @@
       "htmlPreprocessor": {
         "key": "none",
         "extension": "html"
-      },
-      "bootstrapComponents": {
-        "name": null,
-        "version": null,
-        "key": null,
-        "module": null
       },
       "foundationComponents": {
         "name": null,

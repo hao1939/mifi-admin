@@ -1,4 +1,4 @@
-angular.module 'mifiAdmin', ['ngResource', 'ngRoute', 'ngMaterial']
+angular.module 'mifiAdmin', ['ngResource', 'ngRoute', 'ui.bootstrap']
   .config ($routeProvider) ->
     $routeProvider
       .when "/",
