@@ -1,0 +1,42 @@
+<div class="container">
+
+  <div ng-include="'app/components/navbar/navbar.html'"></div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>IMSI</th>
+        <th>Status</th>
+        <th>Ready</th>
+        <th>Card Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td>{{sim_card.id}}</td>
+      <td>{{sim_card.imsi}}</td>
+      <td>{{sim_card.status}}</td>
+      <td>{{sim_card.ready}}</td>
+      <td>{{sim_card.card_addr}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <input class="form-control" id="status" ng-model="sim_card.status">
+    </div>
+    <div class="form-group">
+      <label for="network_enabled">是否已开通网络</label>
+      <input class="form-control" id="status" ng-model="sim_card.network_enabled">
+    </div>
+    <div class="form-group">
+      <label for="data_files">3G下发数据</label>
+      <input class="form-control" id="status" ng-model="sim_card.data_files">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="update()">Submit</button>
+  </form>
+
+</div>
