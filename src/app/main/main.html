@@ -7,6 +7,8 @@
       <tr>
         <th>Id</th>
         <th>IMSI</th>
+        <th>MCC</th>
+        <th>MNC</th>
         <th>Status</th>
         <th>Ready</th>
         <th>Card Address</th>
@@ -18,6 +20,8 @@
            ng-click="show_sim_card(sim_card)">
         <td>{{sim_card.id}}</td>
         <td>{{sim_card.imsi}}</td>
+        <td>{{sim_card.mcc}}</td>
+        <td>{{sim_card.mnc}}</td>
         <td>{{sim_card.status}}</td>
         <td>{{sim_card.ready}}</td>
         <td>{{sim_card.card_addr}}</td>
