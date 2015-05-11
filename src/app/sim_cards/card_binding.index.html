@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div ng-include="'app/components/navbar/navbar.html'"></div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>User</th>
+        <th>SimCard</th>
+        <th>Active</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="card_binding in card_bindings | orderBy:'id'">
+        <td>{{card_binding.id}}</td>
+        <td>{{card_binding.user_id}}</td>
+        <td><a ng-href="/sim_cards/{{card_binding.sim_card_id}}/edit">{{card_binding.sim_card_id}}</td>
+        <td>{{card_binding.active}}</td>
+        <td>
+          <button type="button"
+            class="btn btn-primary"
+            ng-disabled="!card_binding.active"
+            ng-click="deactive(card_binding)"
+            ng-display="card_binding.active"
+            >Deactive it!</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -7,6 +7,9 @@ angular.module 'mifiAdmin', ['ngResource', 'ngRoute', 'ui.bootstrap']
       .when '/sim_cards/:id/edit',
         templateUrl: 'app/sim_cards/sim_card.edit.html'
         controller: 'SimCardCtrl'
+      .when '/card_bindings',
+        templateUrl: 'app/sim_cards/card_binding.index.html'
+        controller: 'CardBindingCtrl'
       .otherwise
         redirectTo: '/index.html'
     $locationProvider.html5Mode(true)

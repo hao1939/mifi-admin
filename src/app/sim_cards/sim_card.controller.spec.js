@@ -2,7 +2,7 @@
 
 describe('controllers', function(){
   var scope;
-  var simCard = {
+  var SimCard = {
     get: function () {return {id: 1, status: 'free'} }
   };
 
@@ -18,7 +18,7 @@ describe('controllers', function(){
 
     $controller('SimCardCtrl', {
       $scope: scope,
-      simCard: simCard
+      SimCard: SimCard
     });
 
     expect(angular.isObject(scope.sim_card)).toBeTruthy();
