@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div ng-include="'app/components/navbar/navbar.html'"></div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>SimCard</th>
+        <th>ActiveFrom</th>
+        <th>ExpireOn</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="static_card_assignment in static_card_assignments | orderBy:'id'">
+        <td>{{static_card_assignment.user_id}}</td>
+        <td><input ng-model="static_card_assignment.new_sim_card_id" ng-init="static_card_assignment.new_sim_card_id=static_card_assignment.sim_card_id"></td>
+        <td>{{static_card_assignment.active_from | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+        <td>{{static_card_assignment.expire_on | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+        <td>
+          <button type="button"
+            class="btn btn-primary"
+            ng-disabled="static_card_assignment.new_sim_card_id == static_card_assignment.sim_card_id"
+            ng-click="update(static_card_assignment)"
+            >Update!</button>
+        </td>
+        <td>
+          <button type="button"
+            class="btn btn-danger"
+            ng-click="delete(static_card_assignment)"
+            >Delete!</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
