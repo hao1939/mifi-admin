@@ -20,9 +20,9 @@
         <td>{{card_binding.active}}</td>
         <td>
           <button type="button"
-            class="btn btn-primary"
+            class="btn btn-danger"
             ng-disabled="!card_binding.active"
-            ng-click="deactive(card_binding)"
+            ng-click="deactive($index)"
             ng-display="card_binding.active"
             >Deactive it!</button>
         </td>
